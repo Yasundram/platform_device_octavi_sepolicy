@@ -7,6 +7,3 @@ allow hal_aosp_smartcharge_client hal_aosp_smartcharge_hwservice:hwservice_manag
 # Allow binder communication with platform_app
 binder_call(hal_aosp_smartcharge, platform_app)
 
-# Allow smartcharge to write charge control sysfs node
-allow hal_aosp_smartcharge sysfs_battery_supply:dir r_dir_perms;
-allow hal_aosp_smartcharge sysfs_battery_supply:file rw_file_perms;
